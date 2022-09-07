@@ -17,57 +17,91 @@
 
 <body>
     <div class="container-fluid">
-        <div class="header">
+        <div class="head">
             <h1>ACEDU GENERATION BANK</h1>
             <h6>Bank of the free</h6>
         </div>
         <div class="wrapper">
             <div class="box">
-                <div class="description">
-                    <h2>Register New Acoount</h2>
-                    <div class="form-group row">
-                        <label for="inputName" class="col-sm-5 col-form-label" id="names">Account Name:</label>
-                        <div class="col-sm-2">
-                            <input type="text" class="form-control" id="inputName" style="width:130px;" required>
+                <div id="new">
+                    <form class="newAccForm">
+                        <div class="description">
+                            <h2 class="shead">Register New Acoount</h2>
+                            <div class="form-group row">
+                                <label for="inputName" class="col-sm-5 col-form-label" id="names">Account Name:</label>
+                                <div class="col-sm-2">
+                                    <input type="text" class="form-control" id="inputName" style="width:130px;"
+                                        required>
+                                </div>
+                            </div><br>
+                            <div class="form-group row">
+                                <label for="initialDeposit" class="col-sm-5 col-form-label" id="init">Initial
+                                    Deposit:</label>
+                                <div class="col-sm-5">
+                                    <input type="number" class="form-control" id="initialDeposit" style="width:130px;"
+                                        required>
+                                </div>
+                            </div><br>
+                            <button class="btn btn-light" type="submit" name="button">Create Account</button>
+                            <ul class="list">
+                                <li><a href="https://twitter.com/sudo_Jayasree" target="_blank"
+                                        rel="noopener noreferrer"><i class="fab fa-twitter"></i></a></li>
+                                <li><a href="https://github.com/Jayasree77"><i class="fab fa-github"></i></a></li>
+                                <li><a href="https://www.linkedin.com/in/jayasree0708/"><i
+                                            class="fab fa-linkedin-in"></i></a>
+                                </li>
+                            </ul>
                         </div>
-                    </div><br>
-                    <div class="form-group row">
-                        <label for="initialDeposit" class="col-sm-5 col-form-label" id="init">Initial Deposit:</label>
-                        <div class="col-sm-5">
-                            <input type="number" class="form-control" id="initialDeposit" style="width:130px;" required>
-                        </div>
-                    </div><br>
-                    <button class="btn btn-light" type="submit" name="button">Create Account</button>
-                    <ul class="list">
-                        <li><a href="https://twitter.com/sudo_Jayasree" target="_blank" rel="noopener noreferrer"><i
-                                    class="fab fa-twitter"></i></a></li>
-                        <li><a href="https://github.com/Jayasree77"><i class="fab fa-github"></i></a></li>
-                        <li><a href="https://www.linkedin.com/in/jayasree0708/"><i class="fab fa-linkedin-in"></i></a>
-                        </li>
-                    </ul>
+                    </form>
                 </div>
             </div>
             <div class="box">
-                <div class="description">
-                    <h2>Pay-In/Withrawal</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. A sunt rem magni quasi tempore alias
-                        nostrum mollitia delectus cupiditate hic unde minima quis officiis, quidem quae quisquam,
-                        aperiam porro fugiat?</p>
-                    <ul class="list">
-                        <li><a href="https://twitter.com/sudo_Jayasree" target="_blank" rel="noopener noreferrer"><i
-                                    class="fab fa-twitter"></i></a></li>
-                        <li><a href="https://github.com/Jayasree77"><i class="fab fa-github"></i></a></li>
-                        <li><a href="https://www.linkedin.com/in/jayasree0708/"><i class="fab fa-linkedin-in"></i></a>
-                        </li>
-                    </ul>
+                <div id="current">
+                    <form id="transactionForm">
+                        <div class="description">
+                            <h2>Pay-In/Withdrawal</h2>
+                            <div class="form-group row">
+                                <label for="newDeposit" class="col-sm-7 col-form-label" id="init">Amount To
+                                    Pay-In:</label>
+                                <div class="col-sm-3">
+                                    <input type="number" class="form-control" id="newDeposit" style="width:100px;">
+                                </div>
+                            </div><br>
+                            <div class="form-group row">
+                                <label for="newWithdraw" class="col-sm-7 col-form-label" id="init">Amount to
+                                    Withdraw</label>
+                                <div class="col-sm-3">
+                                    <input type="number" class="form-control" id="newWithdraw" style="width:100px;">
+                                </div>
+                            </div><br>
+                            <button class="btn btn-light" type="submit" name="button">Process Transaction</button>
+
+                            <ul class="list">
+                                <li><a href="https://twitter.com/sudo_Jayasree" target="_blank"
+                                        rel="noopener noreferrer"><i class="fab fa-twitter"></i></a></li>
+                                <li><a href="https://github.com/Jayasree77"><i class="fab fa-github"></i></a></li>
+                                <li><a href="https://www.linkedin.com/in/jayasree0708/"><i
+                                            class="fab fa-linkedin-in"></i></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </form>
                 </div>
             </div>
             <div class="box">
                 <div class="description">
                     <h2>Transaction History</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. A sunt rem magni quasi tempore alias
-                        nostrum mollitia delectus cupiditate hic unde minima quis officiis, quidem quae quisquam,
-                        aperiam porro fugiat?</p>
+                    <div id="balanceDisp" class="well">
+
+                        <p><b> Name: <span id="accName"></span></p>
+                        <p><b> Account Number: <span id="accNum"></span></p>
+                        <p><b> Current Balance: <span id="curBal"></span></p>
+                        <p><b> Account History: <span id="accHistory"></span></p>
+                        <div id="buttons">
+                        </div>
+                    </div>
+
+
                     <ul class="list">
                         <li><a href="https://twitter.com/sudo_Jayasree" target="_blank" rel="noopener noreferrer"><i
                                     class="fab fa-twitter"></i></a></li>
@@ -77,7 +111,17 @@
                     </ul>
                 </div>
             </div>
+            <div class="bankDiv transactionForm col-sm-7 ">
+                <select id="accSelect" name="">
+                </select>
+                <div id="showInfo">
+                    <p>Account-Name: <span></span></p>
+                </div>
+            </div>
         </div>
+
+    </div>
+    </div><br>
     </div>
     <script src="https://kit.fontawesome.com/bad7f7f5d4.js" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"></script>

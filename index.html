@@ -5,12 +5,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>ACEDU BANK</title>
+    <link rel="stylesheet" href="./css/bootstrap.css">
+    <link rel="stylesheet" href="./css/styles.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Acme&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./css/bootstrap.css">
-    <link rel="stylesheet" href="./css/styles.css">
     <script src="./js/jquery-3.6.0.js"></script>
     <script src="./js/scripts.js"></script>
 </head>
@@ -22,32 +22,36 @@
             <h6>Bank of the free</h6>
         </div>
         <div class="wrapper">
+            <p id="warn">INSUFFICIENT FUNDS!!</p>
+            <p id="warn2">INITIAL DEPOSIT CANNOT BE LESS THAN £2000!</p>
             <div class="box">
                 <div id="new">
                     <form class="newAccForm">
                         <div class="description">
                             <h2 class="shead">Register New Acoount</h2>
                             <div class="form-group row">
-                                <label for="inputName" class="col-sm-5 col-form-label" id="names">Account Name:</label>
+                                <label for="inputName" class="col-sm-5 col-form-label" id="names"><b>Account Name:</b>
+                                </label>
                                 <div class="col-sm-2">
                                     <input type="text" class="form-control" id="inputName" style="width:130px;"
                                         required>
                                 </div>
                             </div><br>
                             <div class="form-group row">
-                                <label for="initialDeposit" class="col-sm-5 col-form-label" id="init">Initial
-                                    Deposit:</label>
+                                <label for="initialDeposit" class="col-sm-5 col-form-label" id="init"> <b> Initial
+                                        Deposit:</b>
+                                </label>
                                 <div class="col-sm-5">
                                     <input type="number" class="form-control" id="initialDeposit" style="width:130px;"
                                         required>
                                 </div>
                             </div><br>
-                            <button class="btn btn-light" type="submit" name="button">Create Account</button>
+                            <button class="btn btn-outline-warning" type="submit" name="button">Create Account</button>
                             <ul class="list">
-                                <li><a href="https://twitter.com/sudo_Jayasree" target="_blank"
+                                <li><a href="https://twitter.com/adenolaTemmah" target="_blank"
                                         rel="noopener noreferrer"><i class="fab fa-twitter"></i></a></li>
-                                <li><a href="https://github.com/Jayasree77"><i class="fab fa-github"></i></a></li>
-                                <li><a href="https://www.linkedin.com/in/jayasree0708/"><i
+                                <li><a href="https://github.com/adeyemifatimah"><i class="fab fa-github"></i></a></li>
+                                <li><a href="https://www.linkedin.com/fateemah adeyemi"><i
                                             class="fab fa-linkedin-in"></i></a>
                                 </li>
                             </ul>
@@ -61,26 +65,27 @@
                         <div class="description">
                             <h2>Pay-In/Withdrawal</h2>
                             <div class="form-group row">
-                                <label for="newDeposit" class="col-sm-7 col-form-label" id="init">Amount To
-                                    Pay-In:</label>
+                                <label for="newDeposit" class="col-sm-7 col-form-label" id="init"> <b> Amount To
+                                        Pay-In: </b></label>
                                 <div class="col-sm-3">
                                     <input type="number" class="form-control" id="newDeposit" style="width:100px;">
                                 </div>
                             </div><br>
                             <div class="form-group row">
-                                <label for="newWithdraw" class="col-sm-7 col-form-label" id="init">Amount to
-                                    Withdraw</label>
+                                <label for="newWithdraw" class="col-sm-7 col-form-label" id="init"> <b> Amount to
+                                        Withdraw: </b></label>
                                 <div class="col-sm-3">
                                     <input type="number" class="form-control" id="newWithdraw" style="width:100px;">
                                 </div>
                             </div><br>
-                            <button class="btn btn-light" type="submit" name="button">Process Transaction</button>
+                            <button class="btn btn-outline-warning" type="submit" name="button">Process
+                                Transaction</button>
 
                             <ul class="list">
-                                <li><a href="https://twitter.com/sudo_Jayasree" target="_blank"
+                                <li><a href="https://twitter.com/adenolaTemmah" target="_blank"
                                         rel="noopener noreferrer"><i class="fab fa-twitter"></i></a></li>
-                                <li><a href="https://github.com/Jayasree77"><i class="fab fa-github"></i></a></li>
-                                <li><a href="https://www.linkedin.com/in/jayasree0708/"><i
+                                <li><a href="https://github.com/adeyemifatimah"><i class="fab fa-github"></i></a></li>
+                                <li><a href="https://www.linkedin.com/fateemah adeyemi"><i
                                             class="fab fa-linkedin-in"></i></a>
                                 </li>
                             </ul>
@@ -93,33 +98,31 @@
                     <h2>Transaction History</h2>
                     <div id="balanceDisp" class="well">
 
-                        <p><b> Name: <span id="accName"></span></p>
-                        <p><b> Account Number: <span id="accNum"></span></p>
-                        <p><b> Current Balance: <span id="curBal"></span></p>
-                        <p><b> Account History: <span id="accHistory"></span></p>
+                        <p class="me"><b> Name: <span id="accName"></span></p>
+                        <p class="me"><b> Account Number: <span id="accNum"></span></p>
+                        <p class="me"><b> Current Balance: <span id="curBal"></span></p>
+                        <p class="me"><b> Account History: <span id="accHistory"></span></p>
                         <div id="buttons">
                         </div>
                     </div>
 
 
                     <ul class="list">
-                        <li><a href="https://twitter.com/sudo_Jayasree" target="_blank" rel="noopener noreferrer"><i
+                        <li><a href="https://twitter.com/adenolaTemmah" target="_blank" rel="noopener noreferrer"><i
                                     class="fab fa-twitter"></i></a></li>
-                        <li><a href="https://github.com/Jayasree77"><i class="fab fa-github"></i></a></li>
-                        <li><a href="https://www.linkedin.com/in/jayasree0708/"><i class="fab fa-linkedin-in"></i></a>
-                        </li>
-                    </ul>
+                        <li><a href="https://github.com/adeyemifatimah"><i class="fab fa-github"></i></a></li>
+                        <li><a href="https://www.linkedin.com/fateemah adeyemi"><i class="fab fa-linkedin-in"></i></a>
                 </div>
             </div>
             <div class="bankDiv transactionForm col-sm-7 ">
                 <select id="accSelect" name="">
                 </select>
                 <div id="showInfo">
-                    <p>Account-Name: <span></span></p>
+                    <p class="me">Account-Name: <span></span></p>
                 </div>
             </div>
         </div>
-
+<div>id</div>
     </div>
     </div><br>
     </div>

@@ -96,7 +96,7 @@ function showAccount(accountId) {
     $("#accHistory").html(account.getHistory());
     let buttons = $("#buttons");
     buttons.empty();
-    buttons.append("<button class='deleteButton' id=" + + account.id + ">Delete</button>");
+    buttons.append("<button class='deleteButton' id=" +  account.id + ">Delete</button>");
 }
 function getSelectedAccount() {
     return parseInt($("#accSelect").children(":selected").attr("id"));
